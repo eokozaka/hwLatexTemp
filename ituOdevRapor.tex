@@ -1,0 +1,101 @@
+%   HAZIRLAYAN: ENGİN ORÇUN KOZAKA
+%	02/04/2022 - v0.0
+%   - İstanbul Teknik Üniversitesi Ödev ve Rapor formatı baz
+% alınarak hazırlanmıştır.
+%   - Üst bilgi ve kapakta kullanılan (satır 23 ve 67) logo ile 
+% ilgili png dosyasının yerini göstermeniz gerekli.
+%   - Kapak sayfasında ve üst bilgide gerekli yerleri doldurmayı
+% unutmayın. :)
+%	- TeXstudio ile direk derlenebiliyor (gerekli paketlerin yüklü olduğu
+% kabulü ile).
+
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage[absolute,overlay]{textpos}
+\setlength{\TPHorizModule}{1mm}
+\setlength{\TPVertModule}{1mm}
+\pagestyle{fancy}
+\fancyhf{}
+\setlength\headheight{62pt}
+%\setlength\footheight{20pt}
+\rhead{\includegraphics[width=2cm]{../../ITU_RAPOR_ODEV_TASLAK/headerLogo.png}}
+\lhead{\headerdekor\fontsize{8}{10}\selectfont Rapor/Ödev Başlığı: HBM512 2021/2022 Bahar Dönemi I. Ödevi 
+\\
+Hazırlayanın Adı Soyadı: Engin Orçun KOZAKA}
+
+\fancyfoot[L]{İSTANBUL TEKNİK ÜNİVERSİTESİ}
+\fancyfoot[R]{\thepage}
+
+\title{HBM512 2021-2022 Bahar Dönemi II. Ödevi}
+\author{Engin Orçun KOZAKA}
+\usepackage{xcolor}
+\usepackage[left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
+\usepackage[some]{background}
+\definecolor{dekorrenk}{cmyk}{0.99,0.45,0,0.52}
+\newcommand\headerdekor{%
+	\begin{tikzpicture}[remember picture,overlay,shorten >= -10pt]
+		
+		\coordinate (p0) at ([xshift=95pt, yshift=-8pt]current page.north west);	
+		
+		\draw[dekorrenk,line width=16pt,rounded corners=8pt,shorten <= -10pt]
+		(p0) --
+		++(0:5.0);% --
+	\end{tikzpicture}%
+}	
+\newcommand\kapakdekor{%
+	\begin{tikzpicture}[remember picture,overlay,shorten >= -10pt]
+
+		\coordinate (p0) at ([yshift=-400pt]current page.north west);	
+
+		\draw[dekorrenk,line width=32pt,rounded corners=8pt,shorten <= -10pt]
+		(p0) --
+		++(0:1.0);% --
+	\end{tikzpicture}%
+}
+
+\begin{document}
+	\begin{titlepage}
+		\kapakdekor
+		   \begin{textblock}{10}(120,20)
+				\includegraphics[width=5cm]{../../ITU_RAPOR_ODEV_TASLAK/headerLogo.png}
+			\end{textblock}
+		
+			\begin{textblock}{150}(20,135)
+				\fontsize{32}{10}\selectfont I. ÖDEV
+			\end{textblock}
+			
+			\begin{textblock}{100}(20,220)
+				\begin{tabbing}
+					\hspace*{5cm}\=\kill
+					{\fontsize{18}{1}\selectfont HAZIRLAYAN\par} \>   \\
+					\\
+					{\fontsize{18}{1}\selectfont ADI SOYADI\par} \> : Engin Orçun KOZAKA \\
+					ÖĞRENCİ NUMARASI \> : 702212002 \\
+					TESLİM TARİHİ \> : 03/04/2022\\
+					\\
+					
+					DERS ADI \> : Bilimsel Hesaplama II\\
+					DERS YÜRÜTÜCÜSÜ \> : Süha TUNA\\
+				\end{tabbing}
+			\end{textblock}
+		
+
+	\end{titlepage}
+
+	{\large CEVAP 1}
+	\\
+	\\
+
+	{\large CEVAP 2}
+	\\
+	\\
+
+\end{document}
